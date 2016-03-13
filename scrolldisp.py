@@ -650,3 +650,7 @@ class ScrollDisp:
             u.show()
             time.sleep(delay)
 
+def Display(text, color=(255,255,255), delay=0.1):
+    disp = ScrollDisp()
+    disp.set_text(text, color)
+    disp.start(delay)

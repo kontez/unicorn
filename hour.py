@@ -1,11 +1,9 @@
 #!/usr/bin/python
 # scrolling rainbows and time. uses scrolldisp.py
 
-import unicornhat as u
-from scrolldisp import *
+from scrolldisp import Display
+import unicornhat, time
 
-u.rotation(180)
-u.brightness(0.05)
-
-disp = ScrollDisp("~R" + time.strftime("%H:%M") + " ~R")
-disp.start()
+unicornhat.rotation(180)
+unicornhat.brightness(0.05)
+Display("~R" + time.strftime("%H:%M") + " ~R")

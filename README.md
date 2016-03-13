@@ -21,17 +21,20 @@ using a private external script at cigix.noip.me/update.php
 scrolldisp.py
 -------------
 A library to make text scroll on the Unicorn. Due to the way I implemented it,
-the default rotation is upside down, USB and Ethernet port pointing upwards.
+`unicorn.rotation(0)` makes display upside down, USB and Ethernet port pointing 
+upwards. But, as I do not override it, you can choose the rotation of display however you want
 
-Contains a single class, ScrollDisp. Use
+Contains class, ScrollDisp, and a function, Display. Use
 
     import scrolldisp
     disp = scrolldisp.ScrollDisp()
+    scrolldisp.Display("some text")
 
 or
 
     from scrolldisp import *
     disp = ScrollDisp()
+    Display("some text")
 
 **Functions**
 
@@ -47,6 +50,10 @@ Clears and sets the buffer for `disp` to `text`. `color` is a standard unicorn R
   
 Makes the buffer for `disp` scroll on unicorn. `time.sleep(delay)` is called between each frame.
 Default delay is 0.1 and scrolls text smoothly.
+
+    Display(text, color, delay)
+
+Executes all the above, with the default values if omitted, without having to instanciate a ScrollDispl.
 
 **Supported characters**
 
