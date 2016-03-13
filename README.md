@@ -52,6 +52,6 @@ Default delay is 0.1 and scrolls text smoothly.
 
 * Uppercase and lowercase letters
 * All digits
-* Special characters: ` !'(),-.:[]_`
+* Special characters: `!'(),-.:[]_` and space
 * Escape sequences: Implementation allows for escape sequences starting with `~` (tilde). Currently, the only escape sequence implemented is 
   * `~R`: Draws a rainbow generated using cosine waves (see `rainbow_appear.py`)
