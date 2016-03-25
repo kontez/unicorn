@@ -1,5 +1,5 @@
-#!/usr/bin/python
 # scrolling rainbows and text
+# to be used as a lib, not executed
 
 import unicornhat as u
 import time, math

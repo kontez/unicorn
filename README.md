@@ -22,9 +22,9 @@ scrolldisp.py
 -------------
 A library to make text scroll on the Unicorn. Due to the way I implemented it,
 `unicorn.rotation(0)` makes display upside down, USB and Ethernet port pointing 
-upwards. But, as I do not override it, you can choose the rotation of display however you want
+upwards. But, as I do not override it, you can choose the rotation of display however you want.
 
-Contains class, ScrollDisp, and a function, Display. Use
+Contains a class, ScrollDisp, and a function, Display. Use
 
     import scrolldisp
     disp = scrolldisp.ScrollDisp()
@@ -38,7 +38,7 @@ or
 
 **Functions**
 
-    ScrollDisp(text)
+    disp = ScrollDisp(text)
   
 Creates a new `ScrollDisp` object and sets its buffer to `text` (optional).
 
@@ -61,4 +61,10 @@ Executes all the above, with the default values if omitted, without having to in
 * All digits
 * Special characters: `!'(),-.:[]_` and space
 * Escape sequences: Implementation allows for escape sequences starting with `~` (tilde). Currently, the only escape sequence implemented is:
-  * `~R`: Draws a rainbow generated using cosine waves (see `rainbow_appear.py`)
+  * `~R`: Draws a rainbow generated using cosine waves (see `rainbow_appear.py`) 
+**Special Notes:** all characters will append a 1-led wide gap before them. However, the ~R rainbow will not so that you can append multiple rainbows continuously.
+If you plan on putting a rainbow after a character, explicitely put a space before the ~R
+(example: `~Ra ~R` will display a rainbow, a 1 wide gap, an 'a', a 1 wide gap, and a rainbow).
+
+Any unknown character will be displayed as a white vertical line and print an error message in the console.
+You can add your own characters by editing `scrolldisp.py`.
