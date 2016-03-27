@@ -18,6 +18,10 @@ song.py
 Uses `scrolldisp.py` to display what song is currently playing on twitch.tv/monstercat,
 using a private external script at cigix.noip.me/update.php
 
+clock.py
+--------
+Displays a clock
+
 scrolldisp.py
 -------------
 A library to make text scroll on the Unicorn. Due to the way I implemented it,
@@ -62,7 +66,8 @@ Executes all the above, with the default values if omitted, without having to in
 * Special characters: `!'(),-.:[]_` and space
 * Escape sequences: Implementation allows for escape sequences starting with `~` (tilde). Currently, the only escape sequence implemented is:
   * `~R`: Draws a rainbow generated using cosine waves (see `rainbow_appear.py`) 
-**Special Notes:** all characters will append a 1-led wide gap before them. However, the ~R rainbow will not so that you can append multiple rainbows continuously.
+
+**Special Notes:** all characters will append a 1-led wide gap before them. However, the ~R rainbow will not, so that you can append multiple rainbows continuously.
 If you plan on putting a rainbow after a character, explicitely put a space before the ~R
 (example: `~Ra ~R` will display a rainbow, a 1 wide gap, an 'a', a 1 wide gap, and a rainbow).
 
